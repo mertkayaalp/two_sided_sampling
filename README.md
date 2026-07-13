@@ -28,10 +28,10 @@ Please note that the code is not generally perfected for performance. It is rath
 
 | Path | Contents |
 |---|---|
-| `finite_hermite.ipynb` | Invertibility heatmap of the 3×3 mixed sampling matrix in the Hermite space $\mathcal H_2$ (1 time sample at $t_0=0$, 2 frequency samples swept over $(\omega_0,\omega_1)$). |
+| `finite_hermite.ipynb` | Invertibility heatmap of the 3×3 mixed sampling matrix in the Hermite space $\mathcal H_2$ . |
 | `hermite_sampling_condition.ipynb` | Condition numbers $\kappa_2$ of pure-time vs. mixed time–frequency sampling matrices for Hermite function spaces. Includes regular/random sampling, $d$-dependent intervals, and the DFT-stabilizer experiment. |
 | `sinc_sampling_condition.ipynb` | Same condition-number study for integer-shifted sinc (bandlimited) bases, including $d$-dependent shift ranges. |
-| `streaming_recon.ipynb` | Spectrum-monitoring demo: reconstruct a $W=1024$ block from every-other time sample plus the top-$K$ DFT bins (matrix-free CG, ring-buffer streaming engine, parameter sweep). |
+| `streaming_recon.ipynb` | Spectrum-monitoring demo: reconstruct a $W=1024$ block from every-other time sample plus the top-K DFT bins (matrix-free CG, ring-buffer streaming engine, parameter sweep). |
 | `results/` | Generated artifacts, grouped by notebook. This directory is created automatically when notebooks are run. |
 
 Generated artifacts are organized as follows:
