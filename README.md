@@ -1,4 +1,4 @@
-# Signal Recovery from Time and Frequency Samples — Numerical Experiments
+# Signal Recovery from Time and Frequency Samples
 
 The code for the paper:
 
@@ -6,8 +6,7 @@ The code for the paper:
 > arXiv:2603.16242 [eess.SP].
 
 The paper studies **two-sided sampling**: reconstructing a signal $f$ from samples of
-$f$ (time domain) *and* of its Fourier transform $\hat f$ (frequency domain), under a
-fixed total sample budget. The experiments here compare the conditioning of one-sided
+$f$ (time domain) *and* of its Fourier transform $\hat f$ (frequency domain). The experiments here compare the conditioning of one-sided
 vs. two-sided sampling matrices in Hermite- and sinc-based finite-dimensional spaces,
 and demonstrate a spectrum-monitoring application where undersampled time data are
 supplemented with a few DFT bins.
@@ -21,7 +20,6 @@ supplemented with a few DFT bins.
 
 ```
 pip install numpy scipy matplotlib jupyter
-
 ```
 
 Please note that the code is not generally perfected for performance. It is rather meant to illustrate the results from the paper. The code is provided as-is without guarantees.
@@ -34,7 +32,6 @@ Please note that the code is not generally perfected for performance. It is rath
 | `hermite_sampling_condition.ipynb` | Condition numbers $\kappa_2$ of pure-time vs. mixed time–frequency sampling matrices for Hermite function spaces. Includes regular/random sampling, $d$-dependent intervals, and the DFT-stabilizer experiment. |
 | `sinc_sampling_condition.ipynb` | Same condition-number study for integer-shifted sinc (bandlimited) bases, including $d$-dependent shift ranges. |
 | `streaming_recon.ipynb` | Spectrum-monitoring demo: reconstruct a $W=1024$ block from every-other time sample plus the top-$K$ DFT bins (matrix-free CG, ring-buffer streaming engine, parameter sweep). |
-| `paper.pdf` | Paper corresponding to the numerical experiments. |
 | `results/` | Generated artifacts, grouped by notebook. This directory is created automatically when notebooks are run. |
 
 Generated artifacts are organized as follows:
@@ -57,24 +54,6 @@ Generated artifacts are organized as follows:
 | Fig. 5 | `sinc_sampling_condition.ipynb` | Experiment 2b: $d$-dependent shifts/time interval, `FREQ_INTERVAL=(-3,3)`, random sampling | `results/sinc_sampling_condition/sinc_condition_number_ddep_random.png` |
 | Fig. 6 | `streaming_recon.ipynb` | "Three-way reconstruction comparison" cell: $W=1024$, $N_u=2$, $K\in\{2,4\}$, SNR 16 dB, `np.random.seed(55)` | `results/streaming_recon/reconstruction_comparison_three_plots.png` |
 
-## Conventions
-
-- **Fourier transform:** unitary convention,
-  $\hat f(\omega) = \frac{1}{\sqrt{2\pi}}\int f(t)\,e^{-i\omega t}\,dt$.
-- **Hermite functions:** evaluated by the stable three-term recurrence;
-  eigenfunctions of the Fourier transform, $\hat\varphi_n = (-i)^n \varphi_n$,
-  so the frequency block of the mixed matrix is $B_\omega\,\mathrm{diag}((-i)^n)$.
-- **Sinc basis:** $s_n(t)=\mathrm{sinc}(t-n)$ with
-  $\hat s_n(\omega)=\frac{1}{\sqrt{2\pi}}e^{-i\omega n}\,\mathbb 1_{|\omega|\le\pi}$.
-- **Mixed matrix split:** $k=\lceil \texttt{TIME\_RATIO}\cdot d\rceil$ time rows,
-  $m=d-k$ frequency rows (default ratio 0.5).
-- **Condition number:** $\kappa_2=\sigma_{\max}/\sigma_{\min}$, full SVD for
-  $d\le 2000$, iterative `svds` above; values reported as `inf` when
-  $\sigma_{\min}$ underflows.
-- **Streaming reconstruction:** Method A (time-only) is a diagonal solve;
-  Method B (time+frequency) is solved matrix-free with preconditioned CG via FFTs,
-  scaling to large $W$ without forming any matrix.
-
 ## Running
 
 Open any notebook in Jupyter and run all cells top to bottom:
@@ -85,9 +64,7 @@ jupyter lab
 
 Each notebook has a clearly marked **configuration cell near the top**
 (intervals, ratios, dimensions, trial counts, sweep grids). Long sweeps checkpoint
-their JSON results incrementally, so partial runs are not lost. Random experiments
-use fixed seeds and report means over multiple trials (10 for Hermite/sinc random
-sampling, 1000 for the sinc $d$-dependent experiment).
+their JSON results incrementally, so partial runs are not lost. 
 
 All PNG, JSON, and CSV artifacts are written below the notebook-specific directories
 in `results/`; no generated result files are written to the repository root.
