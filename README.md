@@ -45,14 +45,14 @@ Generated artifacts are organized as follows:
 
 ## Notebook → paper figure map
 
-| Paper figure | Notebook | Configuration | Output file |
+| Paper figure | Notebook | Configuration | 
 |---|---|---|---|
-| Fig. 1 | `finite_hermite.ipynb` | $d=3$, $t_0=0$, singularity threshold $1.85\times10^{-5}$ | `results/finite_hermite/mixed_sampling.png` |
-| Fig. 2 | `hermite_sampling_condition.ipynb` | `TIME_INTERVAL=(1,2)`, `FREQ_INTERVAL=(-1,0)`, `TIME_RATIO=0.5` (repo default) | `results/hermite_sampling_condition/hermite_condition_number_comparison.png` |
-| Fig. 3 | `hermite_sampling_condition.ipynb` | **Set `TIME_INTERVAL=(-1,1)`, `FREQ_INTERVAL=(-1,1)` and re-run** | `results/hermite_sampling_condition/hermite_condition_number_all_comparison.png` |
-| Fig. 4 | `hermite_sampling_condition.ipynb` | DFT-stabilizer experiment (Experiment 3), default intervals | `results/hermite_sampling_condition/hermite_condition_number_dft_regular.png` |
-| Fig. 5 | `sinc_sampling_condition.ipynb` | Experiment 2b: $d$-dependent shifts/time interval, `FREQ_INTERVAL=(-3,3)`, random sampling | `results/sinc_sampling_condition/sinc_condition_number_ddep_random.png` |
-| Fig. 6 | `streaming_recon.ipynb` | "Three-way reconstruction comparison" cell: $W=1024$, $N_u=2$, $K\in\{2,4\}$, SNR 16 dB, `np.random.seed(55)` | `results/streaming_recon/reconstruction_comparison_three_plots.png` |
+| Fig. 1 | `finite_hermite.ipynb` | $d=3$, $t_0=0$, singularity threshold $1.85\times10^{-5}$ 
+| Fig. 2 | `hermite_sampling_condition.ipynb` | `TIME_INTERVAL=(1,2)`, `FREQ_INTERVAL=(-1,0)`, `TIME_RATIO=0.5` (repo default) | 
+| Fig. 3 | `hermite_sampling_condition.ipynb` | **Set `TIME_INTERVAL=(-1,1)`, `FREQ_INTERVAL=(-1,1)` and re-run** |
+| Fig. 4 | `hermite_sampling_condition.ipynb` | DFT-stabilizer experiment (Experiment 3), default intervals |
+| Fig. 5 | `sinc_sampling_condition.ipynb` | Experiment 2b: $d$-dependent shifts/time interval, `FREQ_INTERVAL=(-3,3)`, random sampling | 
+| Fig. 6 | `streaming_recon.ipynb` | "Three-way reconstruction comparison" cell: $W=1024$, $N_u=2$, $K\in\{2,4\}$, SNR 16 dB |
 
 ## Running
 
