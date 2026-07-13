@@ -43,7 +43,7 @@ Generated artifacts are organized as follows:
 | `results/sinc_sampling_condition/` | `sinc_sampling_condition.ipynb` |
 | `results/streaming_recon/` | `streaming_recon.ipynb` |
 
-## Notebook → paper figure map
+## Reconstructing the figures in the paper
 
 | Paper figure | Notebook | Configuration | 
 |---|---|---|
@@ -52,7 +52,7 @@ Generated artifacts are organized as follows:
 | Fig. 3 | `hermite_sampling_condition.ipynb` | **Set `TIME_INTERVAL=(-1,1)`, `FREQ_INTERVAL=(-1,1)` and re-run** |
 | Fig. 4 | `hermite_sampling_condition.ipynb` | DFT-stabilizer experiment (Experiment 3), default intervals |
 | Fig. 5 | `sinc_sampling_condition.ipynb` | Experiment 2b: $d$-dependent shifts/time interval, `FREQ_INTERVAL=(-3,3)`, random sampling | 
-| Fig. 6 | `streaming_recon.ipynb` | "Three-way reconstruction comparison" cell: $W=1024$, $N_u=2$, $K\in\{2,4\}$, SNR 16 dB |
+| Fig. 6 | `streaming_recon.ipynb` | "Three-way reconstruction Ccmparison" cell: $W=1024$, $N_u=2$, $K\in\{2,4\}$, SNR 16 dB |
 
 ## Running
 
