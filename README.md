@@ -46,8 +46,8 @@ Generated artifacts are organized as follows:
 ## Notebook → paper figure map
 
 | Paper figure | Notebook | Configuration | 
-|---|---|---|---|
-| Fig. 1 | `finite_hermite.ipynb` | $d=3$, $t_0=0$, singularity threshold $1.85\times10^{-5}$ 
+|---|---|---|
+| Fig. 1 | `finite_hermite.ipynb` | $d=3$, $t_0=0$, singularity threshold $1.85\times10^{-5}$ | 
 | Fig. 2 | `hermite_sampling_condition.ipynb` | `TIME_INTERVAL=(1,2)`, `FREQ_INTERVAL=(-1,0)`, `TIME_RATIO=0.5` (repo default) | 
 | Fig. 3 | `hermite_sampling_condition.ipynb` | **Set `TIME_INTERVAL=(-1,1)`, `FREQ_INTERVAL=(-1,1)` and re-run** |
 | Fig. 4 | `hermite_sampling_condition.ipynb` | DFT-stabilizer experiment (Experiment 3), default intervals |
